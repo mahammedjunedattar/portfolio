@@ -24,7 +24,37 @@ const MessagesPage = () => {
 
     fetchMessages();
   }, []);
-
+  const removemessage = async (id, i) => {
+    try {
+      const response = await fetch('/apis/removemessages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id }), // Wrap id in an object
+        credentials: 'include', // Include credentials in the request
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Error removing message:', errorData);
+        return;
+      }
+  
+      const data = await response.json();
+      console.log('Message removed successfully:', data);
+      const updatedMessages = messages.filter((message) => message._id !== id);
+      setMessages(updatedMessages);
+  
+      // Assuming you have a stateful list of messages, update it here
+      // Example: messages.splice(i, 1); setMessages([...messages]);
+  
+    } catch (error) {
+      console.error('Error removing message:', error);
+    }
+    
+  };
+  
   return (
     <DashboardLayout>
       <div>
@@ -42,9 +72,33 @@ const MessagesPage = () => {
               </tr>
             </thead>
             <tbody>
-              {messages.map((msg) => (
+              {messages.map((msg,i) => (
                 <tr key={msg._id} className="border-b border-gray-700">
-                  <td className="px-4 py-2">{msg.name}</td>
+                  <td className="px-4 py-2"> <div className='flex'> <button onClick={()=>removemessage(msg._id,i)}
+  className="flex items-center justify-center w-5  h-5 text-red-600 bg-red-100 rounded-full shadow hover:bg-red-200 hover:shadow-md transition duration-300"
+  aria-label="Remove"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+</button>
+<div>
+
+{msg.name}
+</div>
+
+</div>  </td>
                   <td className="px-4 py-2">{msg.email}</td>
                   <td className="px-4 py-2">{msg.Number}</td>
                   <td className="px-4 py-2">{msg.message}</td>

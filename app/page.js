@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import RecentProjects from './projects/page'
+
 import ArchitectureServices from './Architectureservices'
 import OngoingProjects from './ongoingprojects'
 const page = () => {
@@ -9,7 +10,6 @@ const page = () => {
       <Navbar/>
       <RecentProjects/>
       <ArchitectureServices/>
-      <OngoingProjects/>
       {/*footer*/}
       
     </div>

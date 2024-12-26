@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -19,19 +20,19 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-lime-500">Quick Links</h3>
           <ul className="mt-4 space-y-2">
             <li>
-              <a href="/Services" className="hover:text-white">
+              <Link href="/Services" className="hover:text-white">
                 Our Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/projects" className="hover:text-white">
+              <Link href="/projects" className="hover:text-white">
                 Recent Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white">
+              <Link href="/contact" className="hover:text-white">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -41,17 +42,15 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-lime-500">Contact Us</h3>
           <ul className="mt-4 space-y-2">
             <li>
-              <span className="text-white">Phone:</span> +91 98765 43210
+              <span className="text-white">Phone:</span> +91 7709 075 369
             </li>
             <li>
               <span className="text-white">Email:</span>{" "}
-              <a href="mailto:info@yourdomain.com" className="hover:text-white">
-                info@yourdomain.com
-              </a>
+              <Link href="mailto:info@yourdomain.com" className="hover:text-white">
+              mominfaizan754@gmail.com              </Link>
             </li>
             <li>
-              <span className="text-white">Address:</span> 123 Dream Street, 
-              New Delhi, India
+              <span className="text-white">Address:</span> Guruwar Peth ,Near Salati Masjid
             </li>
           </ul>
         </div>
@@ -60,30 +59,30 @@ const Footer = () => {
       {/* Social Media & Copyright */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-center">
         <div className="flex justify-center space-x-6">
-          <a
+          <Link
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
           >
             <i className="fab fa-facebook-f text-xl"></i>
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
           >
             <i className="fab fa-twitter text-xl"></i>
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
           >
             <i className="fab fa-instagram text-xl"></i>
-          </a>
+          </Link>
           <a
             href="https://linkedin.com"
             target="_blank"

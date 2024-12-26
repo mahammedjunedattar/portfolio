@@ -1,5 +1,7 @@
 'use client'
 import { useState } from 'react';
+import ProjectsPage from '../Projectspage/page';
+import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +13,7 @@ const Header = () => {
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <img
-            src="https://images.pexels.com/photos/3831159/pexels-photo-3831159.jpeg?auto=compress&cs=tinysrgb&w=400"
+            src="./home.jpg.jpg"
             alt="Header Background"
             className="w-full h-full object-cover"
           />
@@ -20,28 +22,28 @@ const Header = () => {
         {/* Navbar */}
         <nav className="flex items-center justify-between p-4 md:px-8 bg-black bg-opacity-40 text-lime-300">
           <div className="text-2xl font-bold text-lime-200 drop-shadow-lg">
-            <a href="#">CivilEngineer</a>
+            <Link href="/">CivilEngineer</Link>
           </div>
-          <ul className="hidden md:flex space-x-6 text-lime-200 drop-shadow-lg">
+          <ul className="hidden  md:flex  space-x-6 text-lime-200 drop-shadow-lg">
             <li>
-              <a href="#" className="hover:text-lime-400">
+              <Link href="/" className="hover:text-lime-400">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Projectspage" className="hover:text-lime-400">
+              <Link href="/Projectspage" className="hover:text-lime-400">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Services" className="hover:text-lime-400">
+              <Link href="/Services" className="hover:text-lime-400">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-lime-400">
+              <Link href="/contact" className="hover:text-lime-400">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="md:hidden">
@@ -58,26 +60,26 @@ const Header = () => {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 w-full bg-black bg-opacity-50 text-lime-300 md:hidden">
             <ul className="flex flex-col items-center space-y-4 p-4">
-              <li>
-                <a href="#" className="hover:text-lime-400">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-lime-400">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-lime-400">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-lime-400">
-                  Contact
-                </a>
-              </li>
+            <li>
+              <Link href="/" className="hover:text-lime-400">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/Projectspage" className="hover:text-lime-400">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="/Services" className="hover:text-lime-400">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-lime-400">
+                Contact
+              </Link>
+            </li>
             </ul>
           </div>
         )}
@@ -91,7 +93,9 @@ const Header = () => {
               Transforming your vision into reality with exceptional engineering solutions.
             </p>
             <button className="mt-6 px-6 py-3 text-lg font-semibold text-white bg-lime-500 hover:bg-lime-600 rounded-md">
-              Get Started
+            <Link href={'/contact'}>            Book Appointement
+            </Link>
+
             </button>
           </div>
           <div className="hidden md:block w-1/2"></div>
@@ -115,7 +119,7 @@ const Header = () => {
               <p className="mt-4 text-gray-400">Certified Engineer with Industry-Recognized Qualifications</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-lime-500">100+ Projects</h3>
+              <h3 className="text-2xl font-bold text-lime-500">20+ Projects</h3>
               <p className="mt-4 text-gray-400">Successfully Delivered Projects in Various Engineering Domains</p>
             </div>
           </div>

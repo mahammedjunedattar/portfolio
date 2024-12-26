@@ -2,14 +2,13 @@
 import { useState } from "react";
 
 const projects = [
-  { title: "Project 1", img: "https://via.placeholder.com/200x150" },
-  { title: "Project 2", img: "https://via.placeholder.com/200x150" },
-  { title: "Project 3", img: "https://via.placeholder.com/200x150" },
-  { title: "Project 4", img: "https://via.placeholder.com/200x150" },
-  { title: "Project 5", img: "https://via.placeholder.com/200x150" },
-  { title: "Project 6", img: "https://via.placeholder.com/200x150" },
-  { title: "Project 7", img: "https://via.placeholder.com/200x150" },
-  { title: "Project 8", img: "https://via.placeholder.com/200x150" },
+  { title: "Project 1", img: "/client.jpg1.jpg" },
+  { title: "Project 2", img: "/client.jpg2.jpg" },
+  { title: "Project 3", img: "/client.jpg3.jpg" },
+  { title: "Project 4", img: "/client.jp4.jpg" },
+  { title: "Project 5", img: "/client.jpg5.jpg" },
+  { title: "Project 6", img: "/client.jpg6.jpg" },
+  { title: "Project 7", img: "/client.jpg7.jpg" },
 ];
 
 const RecentProjects = () => {
@@ -20,12 +19,12 @@ const RecentProjects = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0
         ? Math.ceil(projects.length / projectsPerRow) - 1
-        : prevIndex - 1
+        : prevIndex - 1  
     );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex((prevIndex) => 
       prevIndex === Math.ceil(projects.length / projectsPerRow) - 1
         ? 0
         : prevIndex + 1

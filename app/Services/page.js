@@ -4,32 +4,32 @@ const ServicesPage = () => {
   const services = [
     {
       id: 1,
-      title: "Architectural Design",
+      title: "Custom Home Designs",
       description:
-        "Innovative and sustainable architectural solutions tailored to meet your vision and requirements.",
-      image: "https://via.placeholder.com/400x300",
-    },
+        "Designing personalized homes tailored to your lifestyle and preferences with sustainable materials.",
+        image: "./client.jpg3.jpg",
+      },
     {
       id: 2,
-      title: "Interior Design",
+      title: "Elegant Kitchen Interiors",
       description:
-        "Creating beautiful, functional, and inspiring interior spaces that reflect your style and needs.",
-      image: "https://via.placeholder.com/400x300",
+        "Crafting functional and stylish kitchens that blend luxury with practicality.",
+      image: "./client.jpg6.jpg",
     },
     {
       id: 3,
-      title: "Urban Planning",
+      title: "Interior",
       description:
-        "Comprehensive urban planning services to shape vibrant, sustainable, and livable communities.",
-      image: "https://via.placeholder.com/400x300",
-    },
+        "Innovative housing designs for urban communities, focusing on space optimization and sustainability.",
+        image: "./client.jpg1.jpg",
+      },
     {
       id: 4,
-      title: "Landscape Design",
+      title: "Eco-friendly Outdoor Spaces",
       description:
-        "Transforming outdoor spaces into aesthetically pleasing and eco-friendly landscapes.",
-      image: "https://via.placeholder.com/400x300",
-    },
+        "Creating serene and green outdoor environments that enhance living experiences.",
+        image: "./client.jpg1.jpg",
+      },
   ];
 
   return (
@@ -40,7 +40,7 @@ const ServicesPage = () => {
           Our Services
         </h1>
         <p className="text-center text-gray-600 text-lg mt-4">
-          Explore the wide range of architectural and design services we offer.
+          Discover the range of architectural and design solutions we provide to elevate your spaces.
         </p>
 
         {/* Services Grid */}
